@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.9.34723.18
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DbAccessPoint", "DbAccessPoint.csproj", "{CABE9825-ADB3-43EE-BDAA-C4A920740316}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{CABE9825-ADB3-43EE-BDAA-C4A920740316}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CABE9825-ADB3-43EE-BDAA-C4A920740316}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CABE9825-ADB3-43EE-BDAA-C4A920740316}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CABE9825-ADB3-43EE-BDAA-C4A920740316}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {4155B4AE-B9E6-41F7-B9B6-73B4CED14792}
+	EndGlobalSection
+EndGlobal
