@@ -1,33 +1,30 @@
-﻿// вариант 4: сортировка пузырьком
+﻿using System.Diagnostics;
+using RefExample2.Algorithm;
 
-using System;
-using System.Diagnostics;
-
-class Program
+namespace RefExample2
 {
-    static void BubbleSort(int[] arr)
+    public static class Program
     {
-        for (int i = 0; i < arr.Length - 1; i++)
+        public static void Main(string[] args)
         {
-            for (int j = 0; j < arr.Length - i - 1; j++)
-            {
-                if (arr[j] > arr[j + 1])
-                {
-                    int temp = arr[j];
-                    arr[j] = arr[j + 1];
-                    arr[j + 1] = temp;
-                }
-            }
-        }
-    }
+            /* Generate arrays:
+             1. Small: 10 entries;
+             2. Medium: 10000 entries;
+             3. Large: 1000000 entries;
+             */
 
-    static void Main()
-    {
-        int[] arr = { 64, 34, 25, 12, 22, 11, 90 };
-        Stopwatch sw = Stopwatch.StartNew();
-        BubbleSort(arr);
-        sw.Stop();
-        Console.WriteLine("Отсортированный массив: " + string.Join(", ", arr));
-        Console.WriteLine("Время: " + sw.ElapsedTicks + " тиков");
+            int[] small = [9, 4, 1, 7, 3, 8, 2, 6, 5, 0];
+            var medium = new int[100000];
+            var large = new int[1_000_000];
+
+            var rnd = new Random();
+
+            for (var i = 0; i < medium.Length; i++) medium[i] = rnd.Next(0, medium.Length);
+            for (var i = 0; i < large.Length; i++) large[i] = rnd.Next(0, large.Length);
+
+            Test.Test.RunTests("Small array", small, runBubble: true);
+            Test.Test.RunTests("Medium array", medium, runBubble: true);
+            Test.Test.RunTests("Large array", large, runBubble: false);
+        }
     }
 }
